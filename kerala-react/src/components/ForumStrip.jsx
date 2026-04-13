@@ -19,10 +19,10 @@ const PHOTOS = [
 ]
 
 function useDrag(ref) {
-  const drag = useRef({ down: false, startX: 0, scrollLeft: 0 })
+  const drag = useRef({ down: false, startX: 0, startY: 0, scrollLeft: 0, lockAxis: null })
 
   const onMouseDown = useCallback(e => {
-    drag.current = { down: true, startX: e.pageX - ref.current.offsetLeft, scrollLeft: ref.current.scrollLeft }
+    drag.current = { down: true, startX: e.pageX - ref.current.offsetLeft, startY: 0, scrollLeft: ref.current.scrollLeft, lockAxis: null }
     ref.current.classList.add('dragging')
   }, [ref])
   const onMouseLeave = useCallback(() => { drag.current.down = false; ref.current?.classList.remove('dragging') }, [ref])
@@ -34,14 +34,32 @@ function useDrag(ref) {
     ref.current.scrollLeft = drag.current.scrollLeft - (x - drag.current.startX) * 1.4
   }, [ref])
   const onTouchStart = useCallback(e => {
-    drag.current = { down: true, startX: e.touches[0].pageX - ref.current.offsetLeft, scrollLeft: ref.current.scrollLeft }
+    drag.current = {
+      down: true,
+      startX: e.touches[0].pageX,
+      startY: e.touches[0].clientY,
+      scrollLeft: ref.current.scrollLeft,
+      lockAxis: null,
+    }
   }, [ref])
   const onTouchMove = useCallback(e => {
     if (!drag.current.down) return
+    const dx = Math.abs(e.touches[0].pageX - drag.current.startX)
+    const dy = Math.abs(e.touches[0].clientY - drag.current.startY)
+
+    // определяем ось при первом движении
+    if (!drag.current.lockAxis) {
+      drag.current.lockAxis = dx > dy ? 'x' : 'y'
+    }
+
+    // вертикальный свайп — не перехватываем
+    if (drag.current.lockAxis === 'y') return
+
+    e.preventDefault()
     const x = e.touches[0].pageX - ref.current.offsetLeft
-    ref.current.scrollLeft = drag.current.scrollLeft - (x - drag.current.startX)
+    ref.current.scrollLeft = drag.current.scrollLeft - (x - (drag.current.startX - ref.current.offsetLeft))
   }, [ref])
-  const onTouchEnd = useCallback(() => { drag.current.down = false }, [])
+  const onTouchEnd = useCallback(() => { drag.current.down = false; drag.current.lockAxis = null }, [])
 
   return { onMouseDown, onMouseLeave, onMouseUp, onMouseMove, onTouchStart, onTouchMove, onTouchEnd }
 }
