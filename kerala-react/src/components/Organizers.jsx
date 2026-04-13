@@ -8,7 +8,7 @@ const PEOPLE = [
     photoStyle: { transform: 'scale(0.78)', transformOrigin: 'center center' },
   },
   {
-    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066925/hj3gldjjihbjlfeqxis4.png',
+    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776067273/jm8ogcrfonia9pnxties.png',
     name: 'Дмитрий Кузнецов',
     role: 'Руководитель делегации',
     desc: 'Организатор форумов БРИКС, эксперт в сфере международного сотрудничества.',
