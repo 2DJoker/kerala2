@@ -1,6 +1,6 @@
 const PEOPLE = [
   {
-    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066917/sisuhcanybf05qxvdykp.png',
+    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776080413/kxem3q7dpkjsykjp1j5w.png',
     name: 'Чанди Омен',
     role: 'Руководитель программы',
     desc: 'Координатор международного направления, представитель штата Керала.',
