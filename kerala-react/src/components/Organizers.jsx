@@ -13,7 +13,8 @@ const PEOPLE = [
     role: 'Руководитель делегации',
     desc: 'Организатор форумов БРИКС, эксперт в сфере международного сотрудничества.',
     color: '#1d4ed8',
-    photoStyle: { objectPosition: '80% 10%' },
+    photoStyle: { objectPosition: '40% 10%' },
+    photoClass: 'org-photo-dmitry',
   },
   {
     photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066947/bxhdgyzc4fuafkbwo8qy.png',
@@ -52,7 +53,7 @@ export default function Organizers() {
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
               <div className="org-avatar org-avatar--photo">
-                <img src={p.photo} alt={p.name} style={p.photoStyle || {}} />
+                <img src={p.photo} alt={p.name} style={p.photoStyle || {}} className={p.photoClass || ''} />
               </div>
               <div style={{ width: 40, height: 2, background: `linear-gradient(90deg, ${p.color}, var(--gold2))`, borderRadius: 2, margin: '1.4rem auto .8rem' }} />
               <div className="org-name">{p.name}</div>

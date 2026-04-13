@@ -1224,6 +1224,7 @@ footer { padding: 5rem 5rem 3rem; background: var(--dark); }
 
   #organizers { padding: 3.5rem 0 !important; }
   .org-card { width: 82vw; }
+  .org-photo-dmitry { object-position: 50% 10% !important; }
 
   #partners { padding: 3.5rem 1.2rem !important; }
   .partner-card { width: 100%; max-width: 100%; }
