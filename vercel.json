@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd kerala-react && npm install && npm run build",
+  "outputDirectory": "kerala-react/dist",
+  "framework": null
+}
