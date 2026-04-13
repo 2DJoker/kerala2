@@ -13,7 +13,7 @@ const PEOPLE = [
     role: 'Руководитель делегации',
     desc: 'Организатор форумов БРИКС, эксперт в сфере международного сотрудничества.',
     color: '#1d4ed8',
-    photoStyle: { objectPosition: '65% 10%' },
+    photoStyle: { objectPosition: '80% 10%' },
   },
   {
     photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066947/bxhdgyzc4fuafkbwo8qy.png',
