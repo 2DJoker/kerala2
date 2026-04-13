@@ -54,14 +54,14 @@ export default function Goals() {
     <section id="reviews" style={{
       padding: '7rem 0',
       position: 'relative', overflow: 'hidden',
-      background: 'linear-gradient(160deg, #162010 0%, #0b1208 100%)',
+      background: '#fff',
     }}>
-      <div style={{ position: 'absolute', top: -200, right: -200, width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle,rgba(74,124,63,.1) 0%,transparent 60%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: -200, right: -200, width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle,rgba(29,78,216,.04) 0%,transparent 60%)', pointerEvents: 'none' }} />
 
       <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 5rem', marginBottom: '3rem', position: 'relative' }}>
         <div className="reveal" style={{ textAlign: 'center' }}>
           <span className="section-tag">Зачем это нужно</span>
-          <h2 className="section-title" style={{ color: '#fff' }}>Цели конференции</h2>
+          <h2 className="section-title" style={{ color: 'var(--text)' }}>Цели конференции</h2>
         </div>
       </div>
 

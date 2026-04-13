@@ -40,16 +40,16 @@ const BLOCKS = [
 export default function Program({ scrollTo }) {
   return (
     <section id="program">
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 40% at 50% 0%,rgba(74,124,63,.12) 0%,transparent 60%)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 40% at 50% 0%,rgba(29,78,216,.05) 0%,transparent 60%)', pointerEvents: 'none' }} />
       <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative' }}>
         <div className="reveal" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
           <div className="section-strip">
             <span className="strip-blue" /><span className="strip-green" /><span className="strip-yellow" /><span className="strip-red" />
           </div>
           <span className="section-tag">Программа</span>
-          <h2 className="section-title" style={{ color: '#fff' }}>Что вас ждёт</h2>
+          <h2 className="section-title" style={{ color: 'var(--text)' }}>Что вас ждёт</h2>
         </div>
-        <p className="reveal" style={{ textAlign: 'center', fontSize: '.87rem', color: 'rgba(255,255,255,.45)', fontWeight: 300, maxWidth: 700, margin: '0 auto 3.5rem', lineHeight: 1.85, transitionDelay: '.1s' }}>
+        <p className="reveal" style={{ textAlign: 'center', fontSize: '.87rem', color: '#6b7280', fontWeight: 300, maxWidth: 700, margin: '0 auto 3.5rem', lineHeight: 1.85, transitionDelay: '.1s' }}>
           Пленарные сессии · Панельные дискуссии · B2B-встречи · Выездные визиты в аюрведические центры Кералы
         </p>
         <div className="program-grid">
@@ -69,7 +69,7 @@ export default function Program({ scrollTo }) {
 
         {/* CTA */}
         <div className="reveal" style={{ textAlign: 'center', marginTop: '4rem', transitionDelay: '.3s' }}>
-          <p style={{ fontSize: '.9rem', color: 'rgba(255,255,255,.55)', fontWeight: 300, marginBottom: '1.8rem', lineHeight: 1.7 }}>
+          <p style={{ fontSize: '.9rem', color: '#6b7280', fontWeight: 300, marginBottom: '1.8rem', lineHeight: 1.7 }}>
             Станьте частью международной системы здоровья будущего.
           </p>
           <button className="btn-cta" onClick={() => scrollTo('contact')}>

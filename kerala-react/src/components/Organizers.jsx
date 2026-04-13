@@ -5,7 +5,7 @@ const PEOPLE = [
     role: 'Руководитель программы',
     desc: 'Координатор международного направления, представитель штата Керала.',
     color: '#15803d',
-    photoStyle: { transform: 'scale(0.78)', transformOrigin: 'center center' },
+    photoStyle: { transform: 'scale(0.95)', transformOrigin: 'center top' },
   },
   {
     photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776067273/jm8ogcrfonia9pnxties.png',
@@ -34,15 +34,15 @@ const PEOPLE = [
 
 export default function Organizers() {
   return (
-    <section id="organizers" style={{ padding: '7rem 5rem', background: 'var(--dark)', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% 100%, rgba(74,124,63,.1) 0%, transparent 60%)', pointerEvents: 'none' }} />
+    <section id="organizers" style={{ padding: '7rem 5rem', background: '#f8fafc', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 50% at 50% 100%, rgba(29,78,216,.04) 0%, transparent 60%)', pointerEvents: 'none' }} />
       <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative' }}>
         <div className="reveal" style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <div className="section-strip">
             <span className="strip-green" /><span className="strip-blue" /><span className="strip-red" /><span className="strip-yellow" />
           </div>
           <span className="section-tag">Команда</span>
-          <h2 className="section-title" style={{ color: '#fff' }}>Организаторы</h2>
+          <h2 className="section-title" style={{ color: 'var(--text)' }}>Организаторы</h2>
         </div>
 
         <div className="organizers-grid">

@@ -67,8 +67,8 @@ export default function ForumStrip() {
           <span className="strip-green" /><span className="strip-yellow" /><span className="strip-red" /><span className="strip-blue" />
         </div>
         <span className="section-tag">Фотохроника</span>
-        <h2 className="section-title" style={{ color: '#fff' }}>Форум БРИКС 2025</h2>
-        <p style={{ fontSize: '.82rem', color: 'rgba(255,255,255,.38)', marginTop: '.8rem', fontWeight: 300, letterSpacing: '.06em' }}>
+        <h2 className="section-title" style={{ color: 'var(--text)' }}>Форум БРИКС 2025</h2>
+        <p style={{ fontSize: '.82rem', color: 'rgba(0,0,0,.4)', marginTop: '.8rem', fontWeight: 300, letterSpacing: '.06em' }}>
           Листайте вправо — перетащите или смахните
         </p>
       </div>
