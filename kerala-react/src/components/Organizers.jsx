@@ -1,27 +1,27 @@
 const PEOPLE = [
   {
-    initials: 'ЧО',
+    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066917/sisuhcanybf05qxvdykp.png',
     name: 'Чанди Омен',
     role: 'Руководитель программы',
     desc: 'Координатор международного направления, представитель штата Керала.',
     color: '#15803d',
   },
   {
-    initials: 'ДК',
+    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066925/hj3gldjjihbjlfeqxis4.png',
     name: 'Дмитрий Кузнецов',
     role: 'Руководитель делегации',
     desc: 'Организатор форумов БРИКС, эксперт в сфере международного сотрудничества.',
     color: '#1d4ed8',
   },
   {
-    initials: 'ММ',
+    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066947/bxhdgyzc4fuafkbwo8qy.png',
     name: 'Мария Марьясова',
     role: 'Программный директор',
     desc: 'Специалист в области превентивной медицины и wellness-индустрии.',
     color: '#dc2626',
   },
   {
-    initials: 'ВЗ',
+    photo: 'https://res.cloudinary.com/dndorvlpa/image/upload/v1776066953/esv0ccgaiqpx3bsol7yw.png',
     name: 'Владимир Зуев',
     role: 'Стратегический советник',
     desc: 'Эксперт в области медицинского туризма и инвестиций в оздоровительную инфраструктуру.',
@@ -49,8 +49,8 @@ export default function Organizers() {
               key={p.name}
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <div className="org-avatar" style={{ '--org-color': p.color }}>
-                <span>{p.initials}</span>
+              <div className="org-avatar org-avatar--photo">
+                <img src={p.photo} alt={p.name} />
               </div>
               <div style={{ width: 40, height: 2, background: `linear-gradient(90deg, ${p.color}, var(--gold2))`, borderRadius: 2, margin: '1.4rem auto .8rem' }} />
               <div className="org-name">{p.name}</div>

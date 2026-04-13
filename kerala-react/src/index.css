@@ -890,6 +890,16 @@ footer { padding: 5rem 5rem 3rem; background: var(--dark); }
   content: ''; position: absolute; inset: -3px; border-radius: 50%;
   border: 1.5px solid rgba(212,168,75,.35);
 }
+.org-avatar--photo {
+  background: #1b2d22;
+  width: 110px; height: 110px;
+  overflow: hidden;
+}
+.org-avatar--photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  border-radius: 50%;
+}
 .org-name {
   font-family: 'Jost', sans-serif; font-size: 1.15rem; font-weight: 600;
   color: #fff; line-height: 1.2; margin-bottom: .4rem;
