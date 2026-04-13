@@ -5,7 +5,7 @@ export default function Footer({ scrollTo }) {
         <div className="footer-grid">
           <div>
             <div className="footer-logo-wrap">
-              <img src="/logo-full.png" alt="Present and Future of Preventive Medicine" className="footer-logo-img" />
+              <img src="/logo-emblem.png" alt="Present and Future of Preventive Medicine" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
               Международная конференция стран БРИКС.<br />

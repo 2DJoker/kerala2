@@ -1084,8 +1084,8 @@ footer { padding: 5rem 5rem 3rem; background: var(--dark); }
 
   /* hero-wave на мобиле */
   .hero-wave {
-    margin-top: -80px;
-    height: 80px;
+    margin-top: -20px;
+    height: 60px;
   }
 
   /* ─── About ─── */
