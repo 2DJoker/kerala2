@@ -34,14 +34,13 @@ function useDrag(ref) {
     ref.current.scrollLeft = drag.current.scrollLeft - (x - drag.current.startX) * 1.4
   }, [ref])
 
-  // на мобиле touch-action: pan-y в CSS обеспечивает вертикальный скролл страницы,
-  // JS-обработчики нужны только для горизонтального перетаскивания
   const onTouchStart = useCallback(e => {
-    drag.current = { down: true, startX: e.touches[0].pageX, scrollLeft: ref.current.scrollLeft }
+    drag.current = { down: true, startX: e.touches[0].pageX - ref.current.offsetLeft, scrollLeft: ref.current.scrollLeft }
   }, [ref])
   const onTouchMove = useCallback(e => {
     if (!drag.current.down) return
-    ref.current.scrollLeft = drag.current.scrollLeft - (e.touches[0].pageX - drag.current.startX)
+    const x = e.touches[0].pageX - ref.current.offsetLeft
+    ref.current.scrollLeft = drag.current.scrollLeft - (x - drag.current.startX)
   }, [ref])
   const onTouchEnd = useCallback(() => { drag.current.down = false }, [])
 
